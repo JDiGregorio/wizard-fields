@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Wizard from "./components/Wizard"
+import { Progress } from "./components/Progress"
+import { Navigation } from "./components/Navigation"
+import { Pages } from "./components/Pages"
+import { Page } from "./components/Page"
+
+import "./css/styles.css"
+
+const plantilla = require('./Plantilla.json')
+
+const initialState = {
+    activePageIndex: 0
 }
 
-export default App;
+const App = () => {
+    return (
+        <Wizard initialState={initialState}>
+            <Progress plantilla={plantilla.version} />
+
+            <Navigation />
+
+            <Pages>
+                { plantilla.pages.map((page, index) => (
+                    <Page key={index} title={page.title} instructions={page.instructions} fields={page.fields} />
+                ))} 
+            </Pages>
+        </Wizard>
+    )
+}
+
+export default App

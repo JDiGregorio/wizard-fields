@@ -1,0 +1,77 @@
+{
+	"version": "PLA00001",
+	"pages": [
+	  	{
+			"title": "Página 1",
+			"instructions": "Por favor completar la información solicitada.",
+			"fields": [
+		   		{
+					"name": "nombre",
+					"label": "Nombre",
+					"type": "text",
+					"placeholder": "Agregar nombre.",
+					"validations": [{}]
+				},
+		   		{
+					"name": "apellido",
+					"label": "Apellido",
+					"type": "text",
+					"placeholder": "Agregar apellido.",
+					"validations": [{}]
+				}
+		 	]
+	  	},
+	  	{
+			"title": "Página 2",
+			"instructions": "Por favor completar la información solicitada.",
+			"fields": [
+		   		{
+					"name": "email",
+					"label": "Correo electrónico",
+					"type": "email",
+					"placeholder": "Agregar correo electrónico.",
+					"validations": [{}]
+				}
+		 	]
+	  	},
+	  	{
+			"title": "Página 3",
+			"instructions": "Por favor completar la información solicitada.",
+			"fields": [
+		   		{
+					"name": "edad",
+					"label": "Edad",
+					"type": "number",
+					"placeholder": "Agregar la edad.",
+					"validations": [{}]
+				}
+		 	]
+	  	},
+	  	{
+			"title": "Página 4",
+			"instructions": "Por favor completar la información solicitada.",
+			"fields": [
+		   		{
+					"name": "estado_civil",
+					"label": "Estado civil",
+					"type": "select",
+					"options": [
+						{
+							"label": "Soltero",
+							"value": "soltero"
+						},
+						{
+							"label": "Casado",
+							"value": "casado"
+						},
+						{
+							"label": "Unión libre",
+							"value": "union_libre"
+						}
+					],
+					"validations": [{}]
+				}
+		 	]
+	  	}
+	]
+}
